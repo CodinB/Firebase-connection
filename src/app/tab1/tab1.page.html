@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark" >
+    <ion-title>
+      Message Feed 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <div *ngFor="let p of allPosts">
+    <img src="{{p.imageUrl}}"  alt="">
+
+      <div>
+        <h6>{{p.text}}</h6>
+    <label for="">{{p.from}}</label>
+      </div>
+  </div> -->
+
+  <ion-card  >
+    <ion-card-title>
+      Messages
+    </ion-card-title>
+
+    <ion-card-content *ngFor="let p of allPosts">
+      <ion-card-title>{{p.from}}</ion-card-title>
+      <ion-img src="{{p.imageUrl}}"></ion-img>
+      
+      <br>
+      <ion-label position="stacked">Message: {{p.text}}</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Post
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <!-- Post A New Message -->
+  <ion-card>
+    <ion-card-title>
+      Post a Message
+    </ion-card-title>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Your Message:</ion-label>
+        <ion-input [(ngModel)]="model.text" name="postMessage"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Image URL:</ion-label>
+        <ion-input [(ngModel)]="model.imageUrl" name="imageUrl"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="sendPost()" name="sendFunction" color="dark">
+        <ion-icon name="enter-outline"></ion-icon>
+        Post Message
+      </ion-button>
+     
+    </ion-card-content>
+
+  </ion-card>
+  
+
+</ion-content>
